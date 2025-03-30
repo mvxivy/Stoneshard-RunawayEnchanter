@@ -1,9 +1,18 @@
-:[1000]
-pushglb.v global.add_runaway_enchanter_miniquest
-conv.v.b
-bf [end]
+.localvar 0 arguments
 
-:[1001]
+:[0]
+b [4]
+
+> gml_Script_scr_mod_init_elm_quest (locals=0, argc=0)
+:[1]
+push.s "mod_re_cure_elm"
+conv.s.v
+call.i gml_Script_scr_quest_get(argc=1)
+conv.v.b
+not.b
+bf [3]
+
+:[2]
 push.s "mod_re_cure_elm"
 conv.s.v
 push.i gml_Script_QuestDefinition
@@ -26,11 +35,19 @@ dup.v 0
 push.v stacktop.Register
 callv.v 0
 popz.v
-pushi.e 0
+
+:[3]
+exit.i
+
+:[4]
+push.i gml_Script_scr_mod_init_elm_quest
 conv.i.v
-pushi.e 3
+pushi.e -1
 conv.i.v
-pushi.e snd_quest_update
-conv.i.v
-call.i audio_play_sound(argc=3)
+call.i method(argc=2)
+dup.v 0
+pushi.e -6
+pop.v.v [stacktop]self.scr_mod_init_elm_quest
 popz.v
+
+:[end]

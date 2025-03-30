@@ -126,6 +126,7 @@ public class RunawayEnchanter : Mod
         Msl.AddFunction(ModFiles.GetCode("scr_mod_elm_take_artifact.gml"), "scr_mod_elm_take_artifact");
         Msl.AddFunction(ModFiles.GetCode("scr_mod_secret_agreement.gml"), "scr_mod_secret_agreement");
         Msl.AddFunction(ModFiles.GetCode("scr_mod_can_talk_secret.gml"), "scr_mod_can_talk_secret");
+        Msl.AddFunction(ModFiles.GetCode("scr_mod_init_elm_quest.gml"), "scr_mod_init_elm_quest");
 
         o_skill_enchant_specify.ApplyEvent(ModFiles,
             new MslEvent("gml_Object_o_skill_enchant_specify_Create_0.gml", EventType.Create, 0),
@@ -163,16 +164,21 @@ callv.v 1
 popz.v")
             .Save();
 
-        Msl.AddMenu(
-            "Runaway Enchanter",
-            new UIComponent(
-                name: "Press F1 to fix Elm's quest", associatedGlobal: "add_runaway_enchanter_miniquest",
-                UIComponentType.CheckBox, 0)
-        );
+        // Msl.AddMenu(
+        //     "Runaway Enchanter",
+        //     new UIComponent(
+        //         name: "Press F1 to fix Elm's quest", associatedGlobal: "add_runaway_enchanter_miniquest",
+        //         UIComponentType.CheckBox, 0)
+        // );
 
-        Msl.LoadAssemblyAsString("gml_Object_o_player_KeyPress_112") // F1
-            .MatchFrom(":[end]")
-            .InsertAbove(ModFiles, "gml_Object_o_player_KeyPress_112.asm")
+        // Msl.LoadAssemblyAsString("gml_Object_o_player_KeyPress_112") // F1
+        //     .MatchFrom(":[end]")
+        //     .InsertAbove(ModFiles, "gml_Object_o_player_KeyPress_112.asm")
+        //     .Save();
+
+        Msl.LoadAssemblyAsString("scr_mod_init_elm_quest")
+            .MatchAll()
+            .ReplaceBy(ModFiles, "scr_mod_init_elm_quest.asm")
             .Save();
 
         PatchDialogueData();

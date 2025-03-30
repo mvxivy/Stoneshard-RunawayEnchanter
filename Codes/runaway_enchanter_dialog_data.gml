@@ -177,6 +177,7 @@ global.DialogueData_val.runaway_enchanter =
 
         instruction_INS_startMiniquest: function()
         {
+            scr_mod_init_elm_quest()
             scr_mod_elm_miniquest()
         },
 
