@@ -1,4 +1,4 @@
-global.DialogueData_val.runaway_enchanter =
+global.__dialogue_flow_data.runaway_enchanter =
 {
     RootFragment: "runaway_enchanter",
     Monologue: false,
@@ -342,6 +342,6 @@ var _weapon_effs = [
     "Cooldown_Reduction", "PRR", "Block_Power", "CTA", "Hit_Chance", "CRT", "CRTD", "FMB", "Armor_Piercing"
 ]
 
-var _Fragments = variable_struct_get(global.DialogueData_val.runaway_enchanter, "Fragments")
-var _Scripts = variable_struct_get(global.DialogueData_val.runaway_enchanter, "Scripts")
-var _Specs = variable_struct_get(global.DialogueData_val.runaway_enchanter, "Specs")
+var _Fragments = variable_struct_get(global.__dialogue_flow_data.runaway_enchanter, "Fragments")
+var _Scripts = variable_struct_get(global.__dialogue_flow_data.runaway_enchanter, "Scripts")
+var _Specs = variable_struct_get(global.__dialogue_flow_data.runaway_enchanter, "Specs")

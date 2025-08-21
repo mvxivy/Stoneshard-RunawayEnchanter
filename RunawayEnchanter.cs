@@ -194,7 +194,7 @@ popz.v")
     {
         // Add dialog data
         UndertaleGameObject ob = Msl.AddObject("runaway_enchanter_initializer", isPersistent: true);
-        Msl.AddNewEvent(ob, "", EventType.Create, 0);
+        Msl.AddNewEvent(ob, "", EventType.Other, 10);
         UndertaleRoom start = Msl.GetRoom("START");
         start.AddGameObject("Instances", ob);
 
@@ -253,9 +253,14 @@ array_push(_Fragments.mod_re_runaway_enchanter_ask_which_enchantment_weapon, ""m
 array_push(_Fragments.mod_re_runaway_enchanter_ask_which_enchantment_armor, ""mod_re_pc_cancel"")";
 
         // This allow GML struct syntax.
-        Msl.LoadGML(Msl.EventName("runaway_enchanter_initializer", EventType.Create, 0))
+        Msl.LoadGML(Msl.EventName("runaway_enchanter_initializer", EventType.Other, 10))
             .MatchAll()
             .InsertBelow(insertCodes)
+            .Save();
+
+        Msl.LoadGML("gml_Object_o_dataLoader_Other_10")
+            .MatchFrom("scr_dialogue_loader_init")
+            .InsertBelow("with (runaway_enchanter_initializer) { event_user(0) }")
             .Save();
     }
 }
