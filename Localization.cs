@@ -20,7 +20,7 @@ public static class Localization
                 sentence: new Dictionary<ModLanguage, string>() {
                     {ModLanguage.English, "*Looking visibly anxious* ...... A bastard of the Order?#... No, that... hic... never mind, don't interrupt me while I'm drinking."},
                     {ModLanguage.Chinese, "*神情明显慌张起来*......三手会的杂种？#...不是，那...嗝...没事别打扰我喝酒。"},
-                    {ModLanguage.Russian, "*Выглядит заметно встревоженно* ...... Выродок Ордена?#... Нет, это... *икает*... никогда, не отвлекай меня во время питья."}
+                    {ModLanguage.Russian, "*Выглядит очень встревоженно* ...... Выродок Ордена?#... Нет, это... *икает*... никогда, не отвлекай меня во время питья."}
                 }
             ),
             new LocalizationSentence(
