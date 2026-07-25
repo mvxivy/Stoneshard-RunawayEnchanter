@@ -13,7 +13,7 @@ public class RunawayEnchanter : Mod
     public override string Author => "Altair";
     public override string Name => "Runaway Enchanter";
     public override string Description => "An Enchanter who escaped from the Order's Prison and now lives in seclusion at the Rotten Willow Inn. He can enchant your equipment with specified attributes.";
-    public override string Version => "1.1.0";
+    public override string Version => "1.1.1";
     public override string TargetVersion => "0.8.2.10";
 
     public override void PatchMod()
