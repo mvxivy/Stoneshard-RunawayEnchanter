@@ -64,14 +64,6 @@ public static class Localization
                 }
             ),
             new LocalizationSentence(
-                id: "mod_re_runaway_enchanter_pc_who",
-                sentence: new Dictionary<ModLanguage, string>() {
-                    {ModLanguage.English, "Who are you?"},
-                    {ModLanguage.Chinese, "你是谁？"},
-                    {ModLanguage.Russian, "Кто ты?"}
-                }
-            ),
-            new LocalizationSentence(
                 id: "mod_re_runaway_enchanter_gretting1",
                 sentence: new Dictionary<ModLanguage, string>() {
                     {ModLanguage.English, "Ding ding-ding, two kinds of magic colliding... Oh-it's you."},
@@ -845,23 +837,24 @@ public static class Localization
     {
         List<string> stringList = new List<string>();
 
+        // Column order: id;Russian;English;Chinese;German;Spanish;French;Italian;Portuguese;Polish;Turkish;Japanese;Korean
         string id = "mod_re_cure_elm";
         string text_en = @"Cure Elm";
         string text_zh = @"治疗埃尔姆";
         string text_ru = @"Вылечить Эльма";
-        stringList.Add($"{id};{text_en};{text_en};{text_zh};{text_ru};" + string.Concat(Enumerable.Repeat($"{text_en};", 8)));
+        stringList.Add($"{id};{text_ru};{text_en};{text_zh};" + string.Concat(Enumerable.Repeat($"{text_en};", 9)));
 
         id = "mod_re_find_artifacts";
         text_en = @"Find elixirs or artifacts";
         text_zh = @"寻找灵药或文物";
         text_ru = @"Найти эликсиры или артефакты";
-        stringList.Add($"{id};{text_en};{text_en};{text_zh};{text_ru};" + string.Concat(Enumerable.Repeat($"{text_en};", 8)));
+        stringList.Add($"{id};{text_ru};{text_en};{text_zh};" + string.Concat(Enumerable.Repeat($"{text_en};", 9)));
 
         id = "mod_re_find_artifacts_desc";
         text_en = @"Master Enchanter Elm experiences severe pains in his limbs for a period of time each day and is affected by nightmares at night, causing him to have less energy to perform his more sophisticated enchantment work. Help him find one of the artifacts or elixirs he needs.";
         text_zh = @"附魔大师埃尔姆每天都有段时间会感到四肢剧痛，并且夜间会受到梦魇影响，导致他精力不济，无法施展更加精湛的附魔手艺。如果你能帮助他找到需要的文物或灵药之一，他会很感激。";
         text_ru = @"Мастер-чародей Эльм испытывает сильную боль в своих конечностях в течение определённого времени каждый день и страдает от кошмаров по ночам, что мешает ему полноценно заниматься своим весьма сложным магическим ремеслом. Помогите ему найти один из необходимых артефактов или эликсиров.";
-        stringList.Add($"{id};{text_en};{text_en};{text_zh};{text_ru};" + string.Concat(Enumerable.Repeat($"{text_en};", 8)));
+        stringList.Add($"{id};{text_ru};{text_en};{text_zh};" + string.Concat(Enumerable.Repeat($"{text_en};", 9)));
 
         string questend = ";" + string.Concat(Enumerable.Repeat("text_end;", 12));
 
@@ -884,11 +877,12 @@ public static class Localization
 
         List<string> stringList = new List<string>();
 
+        // Column order: id;Russian;English;Chinese;German;Spanish;French;Italian;Portuguese;Polish;Turkish;Japanese;Korean
         string id = "npc_runaway_enchanter";
         string text_en = "Elm";
         string text_zh = "埃尔姆";
         string text_ru = "Эльм";
-        stringList.Add($"{id};{text_en};{text_en};{text_zh};{text_ru};" + string.Concat(Enumerable.Repeat($"{text_en};", 8)));
+        stringList.Add($"{id};{text_ru};{text_en};{text_zh};" + string.Concat(Enumerable.Repeat($"{text_en};", 9)));
 
         string npc_info_end = string.Concat(Enumerable.Repeat("NPC_info_end;", 13));
 
